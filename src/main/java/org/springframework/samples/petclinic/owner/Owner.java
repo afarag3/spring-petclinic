@@ -21,14 +21,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.Digits;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
@@ -46,15 +45,15 @@ import org.springframework.samples.petclinic.model.Person;
 @Table(name = "owners")
 public class Owner extends Person {
     @Column(name = "address")
-    @NotEmpty
+    @NotBlank
     private String address;
 
     @Column(name = "city")
-    @NotEmpty
+    @NotBlank
     private String city;
 
     @Column(name = "telephone")
-    @NotEmpty
+    @NotBlank
     @Digits(fraction = 0, integer = 10)
     private String telephone;
 
