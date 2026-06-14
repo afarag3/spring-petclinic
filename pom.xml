@@ -75,6 +75,16 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!-- JAXB API (removed from JDK in Java 11+) -->
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+    </dependency>
+
     <!-- caching -->
     <dependency>
       <groupId>javax.cache</groupId>
